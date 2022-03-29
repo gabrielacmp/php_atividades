@@ -1,6 +1,9 @@
-<?php include ('./banco_de_dados.php') ?>
+<?php 
+    include_once ('./php/proLP.crud.php'); 
+    include_once ('./php/connection.php');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -76,12 +79,12 @@
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
-                    <?php foreach($icons as $icon): ?>
+                    <?php foreach(listIcons() as $icon): ?>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-<?=$icon->image?> m-auto text-primary"></i></div>
-                            <h3><?=$icon->title?></h3>
-                            <p class="lead mb-0"><?=$icon->description?></p>
+                            <div class="features-icons-icon d-flex"><i class="bi-<?=$icon["image"]?> m-auto text-primary"></i></div>
+                            <h3><?=$icon["title"]?></h3>
+                            <p class="lead mb-0"><?=$icon["descript"]?></p>
                         </div>
                     </div>
                     <?php endforeach; ?>
@@ -91,12 +94,12 @@
         <!-- Image Showcases-->
         <section class="showcase">
             <div class="container-fluid p-0">
-                <?php foreach($showcases as $indice => $showcase): ?>
+                <?php foreach(listShowcases() as $indice => $showcase): ?>
                 <div class="row g-0">
-                    <div class="col-lg-6 <?= ($indice%2==0) ? "order-lg-2":"" ?> text-white showcase-img" style="background-image: url('assets/img/bg-showcase-<?=$showcase->image?>.jpg')"></div>
+                    <div class="col-lg-6 <?= ($indice%2==0) ? "order-lg-2":"" ?> text-white showcase-img" style="background-image: url('assets/img/bg-showcase-<?=$showcase["image"]?>.jpg')"></div>
                     <div class="col-lg-6 <?= ($indice%2==0) ? "order-lg-1":"" ?> my-auto showcase-text">
-                        <h2><?=$showcase->title?></h2>
-                        <p class="lead mb-0"><?=$showcase->description?></p>
+                        <h2><?=$showcase["title"]?></h2>
+                        <p class="lead mb-0"><?=$showcase["descript"]?></p>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -107,12 +110,12 @@
             <div class="container">
                 <h2 class="mb-5">What people are saying...</h2>
                 <div class="row">
-                    <?php foreach($testimonials as $testimonial): ?>
+                    <?php foreach(listTestimonials() as $testimonial): ?>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-<?=$testimonial->image?>.jpg" alt="..." />
-                            <h5><?=$testimonial->name?></h5>
-                            <p class="font-weight-light mb-0"><?=$testimonial->message?></p>
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-<?=$testimonial["image"]?>.jpg" alt="..." />
+                            <h5><?=$testimonial["nome"]?></h5>
+                            <p class="font-weight-light mb-0"><?=$testimonial["message"]?></p>
                         </div>
                     </div>
                     <?php endforeach; ?>
@@ -182,9 +185,9 @@
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
-                            <?php foreach($medias as $media):?>
+                            <?php foreach(listMedias() as $media):?>
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-<?=$media->icon?> fs-3"></i></a>
+                                <a href="#!"><i class="bi-<?=$media["icon"]?> fs-3"></i></a>
                             </li>
                             <?php endforeach; ?>
                         </ul>
