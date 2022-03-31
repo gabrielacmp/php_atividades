@@ -3,7 +3,7 @@
 
     $image = $_POST['inputImage'];
     $title = $_POST['inputTitle'];
-    $description = $_POST['inputDescript'];
+    $descript= $_POST['inputDescript'];
 
     if(registerIcons($image, $title, $descript))
     {

@@ -4,7 +4,7 @@
     function registerIcons($image, $title, $descript) 
     {
         $link = getConnection();
-        $query = "insert into servicos (image, title, descript) values ('{$image}', '{$title}', '{$descript}')";
+        $query = "insert into icons (image, title, descript) values ('{$image}', '{$title}', '{$descript}')";
         $result = mysqli_query($link, $query);
         mysqli_close($link);
         if($result)

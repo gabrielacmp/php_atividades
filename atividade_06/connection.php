@@ -4,7 +4,7 @@ define("HOSTNAME","localhost");
 define("PORT",3306);
 define("USERNAME","root");
 define("PASSWORD","");
-define("SCHEMA","proLP");
+define("SCHEMA","prolp");
 
 function getConnection(){
     $link = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, SCHEMA, PORT);
