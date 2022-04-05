@@ -24,7 +24,7 @@
         <section class="page-section" id="servicos">
             <div class="container">
                 <div class="text-center mt-5">
-                    <h2 class="section-heading">You're in Icon's Managment System</h2>
+                    <h2 class="section-heading">You're in Testimonial's Managment System</h2>
                     <h3 class="section-subheading text-muted">Use the table bellow to edit or delete elements from the Icon's database.</h3>
                 </div>
                 <table class="table table-stripped" style="color: black;">
