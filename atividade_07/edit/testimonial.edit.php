@@ -4,7 +4,7 @@
     $id = $_POST['inputId'];
     $image = $_POST['inputImage'];
     $nome= $_POST['inputName'];
-    $message = $_POST['inputMessage'];
+    $message = filter_input(INPUT_POST,'inputMessage',FILTER_SANITIZE_SPECIAL_CHARS);
 
     if(updateIcons($id, $image, $nome, $message)){
         header('Location: ../index.php');

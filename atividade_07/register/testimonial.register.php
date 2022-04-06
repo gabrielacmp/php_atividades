@@ -3,7 +3,7 @@
 
     $image = $_POST['inputImage'];
     $nome = $_POST['inputNome'];
-    $message = $_POST['inputMessage'];
+    $message = filter_input(INPUT_POST,'inputMessage',FILTER_SANITIZE_SPECIAL_CHARS);
 
     if(registerTestimonials($image, $nome, $message))
     {
