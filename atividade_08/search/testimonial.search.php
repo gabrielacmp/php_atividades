@@ -1,6 +1,6 @@
 <?php
 
-    include_once('./php/proLP.crud.php');
+    include_once('../php/proLP.crud.php');
 
     session_start();
 

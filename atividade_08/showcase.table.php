@@ -38,13 +38,13 @@
                     <tbody>
                     <?php foreach($_SESSION['showcase_list'] as $showcase): ?>
                         <tr>
-                            <td><?= $showcase["id"] ?></td>
-                            <td><?= $showcase["image"]?></td>
-                            <td><?= $showcase["title"] ?></td>
-                            <td><?= $showcase["descript"] ?></td>
+                            <td><?= $showcase->id ?></td>
+                            <td><?= $showcase->image?></td>
+                            <td><?= $showcase->title ?></td>
+                            <td><?= $showcase->descript ?></td>
                             <td>
-                                <a href="./showcase.form.edit.php?id=<?= $showcase["id"]?>"><i class="bi bi-pencil-square"></i></a>&nbsp;
-                                <a onclick="return confirm('Do you really want to remove this item?')" href="./delete/showcase.delete.php?id=<?= $showcase["id"] ?>"><i class="bi bi-trash"></i></a>
+                                <a href="./showcase.form.edit.php?id=<?= $showcase->id ?>"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                                <a onclick="return confirm('Do you really want to remove this item?')" href="./delete/showcase.delete.php?id=<?= $showcase->id ?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

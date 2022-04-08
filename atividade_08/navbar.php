@@ -17,10 +17,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownManager" role="button" data-bs-toggle="dropdown" aria-expanded="false">Management System</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownManager">
-                        <li><a href="./search.action/icon.search.action.php" class="dropdown-item">Icons</a></li>
-                        <li><a href="./search.action/showcase.search.action.php" class="dropdown-item">Showcases</a></li>
-                        <li><a href="./search.action/testimonial.search.action.php" class="dropdown-item">Testimonials</a></li>
-                        <li><a href="./search.action/media.search.action.php" class="dropdown-item">Medias</a></li>
+                        <li><a href="search.action/icon.search.action.php" class="dropdown-item">Icons</a></li>
+                        <li><a href="search.action/showcase.search.icon.php" class="dropdown-item">Showcases</a></li>
+                        <li><a href="search.action/testimonial.search.icon.php" class="dropdown-item">Testimonials</a></li>
+                        <li><a href="search.action/media.search.action.php" class="dropdown-item">Medias</a></li>
                     </ul>
                 </li>
             </ul>

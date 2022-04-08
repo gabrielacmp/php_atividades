@@ -36,11 +36,11 @@
                     <tbody>
                     <?php foreach($_SESSION['media_list'] as $media): ?>
                         <tr>
-                            <td><?= $media["id"] ?></td>
-                            <td><?= $media["icon"]?></td>
+                            <td><?= $media->id ?></td>
+                            <td><?= $media->icon?></td>
                             <td>
-                                <a href="./media.form.edit.php?id=<?= $media["id"] ?>"><i class="bi bi-pencil-square"></i></a>&nbsp;
-                                <a onclick="return confirm('Do you really want to remove this item?')" href="./delete/media.delete.php?id=<?= $media["id"] ?>"><i class="bi bi-trash"></i></a>
+                                <a href="./media.form.edit.php?id=<?= $media->id ?>"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                                <a onclick="return confirm('Do you really want to remove this item?')" href="./delete/media.delete.php?id=<?= $media->id ?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

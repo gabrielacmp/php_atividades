@@ -38,13 +38,13 @@
                     <tbody>
                     <?php foreach($_SESSION['testimonial_list'] as $testimonial): ?>
                         <tr>
-                            <td><?= $testimonial["id"] ?></td>
-                            <td><?= $testimonial["image"]?></td>
-                            <td><?= $testimonial["nome"] ?></td>
-                            <td><?= $testimonial["message"] ?></td>
+                            <td><?= $testimonial->id ?></td>
+                            <td><?= $testimonial->image ?></td>
+                            <td><?= $testimonial->nome ?></td>
+                            <td><?= $testimonial->message ?></td>
                             <td>
-                                <a href="./testimonial.form.edit.php?id=<?= $testimonial["id"] ?>"><i class="bi bi-pencil-square"></i></a>&nbsp;
-                                <a onclick="return confirm('Do you really want to remove this item?')" href="./delete/testimonial.delete.php?id=<?= $testimonial["id"] ?>"><i class="bi bi-trash"></i></a>
+                                <a href="./testimonial.form.edit.php?id=<?= $testimonial->id ?>"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                                <a onclick="return confirm('Do you really want to remove this item?')" href="./delete/testimonial.delete.php?id=<?= $testimonial->id ?>"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
